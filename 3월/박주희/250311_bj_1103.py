@@ -27,6 +27,7 @@ def dfs(sr, sc, cnt):
             if board[nr][nc] == step:
                 is_infinite = True
                 return
+            
             dfs(nr, nc, cnt+1)
 
     visited[sr][sc] = 0
