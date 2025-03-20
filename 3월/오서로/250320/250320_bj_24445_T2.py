@@ -35,3 +35,4 @@ while q:
             result[node] = cnt
 
 sys.stdout.write("\n".join(map(str, result[1:])) + "\n")
+

@@ -5,11 +5,11 @@ input = sys.stdin.readline
 
 N, M, R = map(int, input().split())
 adj = {i:[] for i in range(1, N + 1)}
+# i : [] << 들어오는 간선의 번호가 내림차순
 for _ in range(M):
     u, v = map(int, input().split())
     heapq.heappush(adj[u], -v)
     heapq.heappush(adj[v], -u)
-
 
 def bfs(adj, start):
     q = deque()

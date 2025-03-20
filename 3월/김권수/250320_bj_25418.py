@@ -1,6 +1,8 @@
 from collections import deque
 
+
 A, K = map(int, input().split())
+
 
 
 def bfs(a, k):
@@ -14,6 +16,7 @@ def bfs(a, k):
         if num + 1 <= K and not visited[num + 1]:
             visited[num + 1] = 1
             q.append((num + 1, cnt + 1))
+
         if num * 2 <= K and not visited[num * 2]:
             visited[num * 2] = 1
             q.append((num * 2, cnt + 1))
