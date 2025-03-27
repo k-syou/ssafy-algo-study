@@ -1,4 +1,4 @@
-반복문으로 풀어보기
+#반복문으로 풀어보기
 
 n = int(input())
 dp = [0] * (n+1)
@@ -18,14 +18,16 @@ print(dp[n])
 #     if x < 2:
 #         d[x] = x
 #         return d[x]
+#     if d[x] != 0:
+#         return d[x]
 #     d[x] = fibo(x-1) + fibo(x-2)
 #     return d[x]
-#
+
 # n = int(input())
 # d = [0] * (n+1)
-#
+
 # fibo(n)
 # print(d[n])
-#
+
 
 
