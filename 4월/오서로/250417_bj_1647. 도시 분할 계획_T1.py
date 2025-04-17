@@ -14,8 +14,6 @@ def union(price, x, y):
     Y = find(y)
 
     if X == Y:
-        # print(x, y, '의 부모', X, Y)
-        # print('겹침')
         return 0
     
     if X > Y:
@@ -32,25 +30,19 @@ house_num, load_num = map(int, input().split())
 M = house_num - 1 # 최소 신장 트리 간선 수
 
 parents = [0] + [i for i in range(1, house_num+1)]
-# visited = [False] * (house_num+1)
 
 edges = []
 for _ in range(load_num):
     h1, h2, price = map(int, input().split())
     heapq.heappush(edges, (price, h1, h2))
 
-# print(edges)
-
-# temp = []
 min_cost = 0
 last = 0
 cnt = 0 # M과 비교할 변수
 for _ in range(len(edges)):
     price, h1, h2 = heapq.heappop(edges)
-    # temp.append((price, h1, h2))
     min_cost += union(price, h1, h2)
     if cnt == M:
         break
     
 print(min_cost - last)
-# print(temp)
