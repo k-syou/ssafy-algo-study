@@ -35,17 +35,14 @@ for _ in range(M):
     parties.append(party_info)
 
 can_go = set()
-for p in parents:
-    if p not in truth_people_info:
-        if p != 0:
-            can_go.add(p)
-            
+for person in range(1, N+1):
+    if parents[person] not in truth_people_info:
+        can_go.add(person)
+
 res = 0
-for party in party_info:
-    if party in can_go:
+for party in parties:
+    if all(person in can_go for person in party):
         res += 1
         
-print(parents)
-print(can_go)
+
 print(res)
-print(parties)
