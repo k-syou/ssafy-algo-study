@@ -16,7 +16,7 @@ for r in range(n):
         if r == 0 and c == 0: continue
         candidate1, candidate2 = int(1e9), int(1e9) 
         # 2 **2025에서 int(1e9)로 바꾸니 시간 줄어듦
-        if r-1 >= 0:
+        if r:
             candidate1 = dp[r-1][c]
             if arr[r][c] >= arr[r-1][c]:
                 candidate1+= (arr[r][c] - arr[r-1][c] + 1)

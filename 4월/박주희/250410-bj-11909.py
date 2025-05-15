@@ -20,4 +20,5 @@ for r in range(1, N+1):
 
         dp[r][c] = min(up_coins, left_coins)
 
+print(*dp, sep='\n')
 print(dp[N][N])

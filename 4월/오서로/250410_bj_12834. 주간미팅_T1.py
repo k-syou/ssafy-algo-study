@@ -18,7 +18,9 @@ for home in homes:
     dists = [int(1e9)]*(V+1)
     dists[home] = 0 # !!
 
+    # to_KIST = int(1e9)
     to_KIST = -1
+    # to_CRfood = int(1e9)
     to_CRfood = -1
     already_search_one = False
     while pq:

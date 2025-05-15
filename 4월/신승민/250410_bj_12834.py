@@ -7,17 +7,24 @@ def prim(start):
     visited = [False] * (V + 1)
     while hq:
         distance, s = heapq.heappop(hq)
-
+        if visited[A] and visited[B]:
+            print('fdasfdsaf')
+            return result
         if visited[s]:
             continue
         
         if s == A or s == B:
             result += distance
+        
+        
+        # if visited[A] and visited[B]:
 
-        if visited[A] and visited[B]:
-            return result
+        #     print('fdasfdsaf')
+        #     return result
         
         visited[s] = True
+        # print(s)
+        # print(visited, visited[A], visited[B])
 
         for d, e in adj_list[s]:
             new_d = distance + d

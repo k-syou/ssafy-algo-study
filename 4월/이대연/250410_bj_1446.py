@@ -25,7 +25,6 @@ distance = [float("inf")] * (D+1) # 최종 거리 저장할 리스트
 # 지름길이 없다면 거리가 1임을 알려주기 위해 저장
 for i in range(D):
     graph[i].append((1,i+1)) # 거리 : 1로 고정, 갈 수 있는 노드 : 다음 숫자
-
     
 
 for _ in range(N):
@@ -36,4 +35,5 @@ for _ in range(N):
         graph[start].append((fast_distance,end)) # 지름길, 다음에 갈 수 있는 구간
 
 Dijkstra(0)
+print(distance)
 print(distance[D])
